@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.15.3/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.15.3/ext-language_tools.min.js"></script>
+    <script
+        type="module"
+        src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
+    ></script>
+    <script defer src="note.js"></script>
+</head>
+<body>
+    <button id="switch" onclick="on_switch_clicked();">Hide</button>
+    <div id="editor"></div>
+    <zero-md>
+        <script type="text/markdown" id="disp">
+        </script>
+    </zero-md>
+</body>
