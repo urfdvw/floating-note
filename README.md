@@ -6,7 +6,7 @@ I was driven mad by the MS sticky notes,
 as it support some rich text functions,
 but never implemented it in a reasonable way.
 
-I want a sticky-note-like quick note taking app,
+I want a sticky-notes-like quick note taking app,
 but with markdown.
 So comes this repo
 
