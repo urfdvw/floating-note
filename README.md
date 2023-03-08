@@ -8,7 +8,7 @@ but never implemented it in a reasonable way.
 
 I want a sticky-notes-like quick note taking app,
 but with markdown.
-So comes this repo
+So comes this repo.
 
 ## How to use
 
