@@ -5,17 +5,25 @@ editor.setOptions({
 });
 
 editor.session.setMode("ace/mode/markdown")
-
 editor.session.on('change', () => {
     document.getElementById('disp').innerHTML = editor.session.getValue();
 })
 
-function on_switch_clicked () {
-    if (document.getElementById('editor').style.display === '') {
+editor.commands.addCommand({
+    name: 'hide',
+    bindKey: { win: 'Ctrl-Enter', mac: 'Cmd-Enter' },
+    exec: function () {
         document.getElementById('editor').style.display = 'none';
-        document.getElementById('switch').innerText = 'Edit'
-    } else {
-        document.getElementById('editor').style.display = '';
-        document.getElementById('switch').innerText = 'Hide'
-    }
+        document.getElementById('switch').style.display = '';
+    },
+});
+
+function show_editor () {
+    document.getElementById('editor').style.display = '';
+    document.getElementById('switch').style.display = 'none';
+    editor.focus();
 }
+show_editor ();
+
+document.body.style.background = 'lightgray';
+// editor.setTheme("ace/theme/monokai");
