@@ -1,4 +1,4 @@
-# Floating note
+# Floating notes
 What MS sticky notes should have been.
 
 ## Why
