@@ -14,16 +14,19 @@ editor.commands.addCommand({
     bindKey: { win: 'Ctrl-Enter', mac: 'Cmd-Enter' },
     exec: function () {
         document.getElementById('editor').style.display = 'none';
-        document.getElementById('switch').style.display = '';
+        document.getElementById('tools').style.display = '';
     },
 });
 
 function show_editor () {
     document.getElementById('editor').style.display = '';
-    document.getElementById('switch').style.display = 'none';
+    document.getElementById('tools').style.display = 'none';
     editor.focus();
 }
-show_editor ();
 
 document.body.style.background = 'lightgray';
 // editor.setTheme("ace/theme/monokai");
+
+function change_color (elem) {
+    document.body.style.background = elem.style.backgroundColor;
+} 

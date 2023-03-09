@@ -1,14 +1,5 @@
 # Floating notes
-What MS sticky notes should have been.
-
-## Why
-I was driven mad by the MS sticky notes,
-as it support some rich text functions,
-but never implemented it in a reasonable way.
-
-I want a sticky-notes-like quick note taking app,
-but with markdown.
-So comes this repo.
+What MS Sticky Notes should have been.
 
 ## How to use
 
