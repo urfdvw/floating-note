@@ -2,6 +2,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Floating Notes</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.15.3/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.15.3/ext-language_tools.min.js"></script>
     <script
@@ -11,7 +15,7 @@
     <script defer src="note.js"></script>
 </head>
 <body>
-    <div id="tools">
+    <div id="tools", style="padding-bottom: 8pt;">
         <a href="#" onclick="show_editor();" style="text-decoration: none">✏️</a>
         <button style="border: 0px; background-color: rgb(238, 229, 148);" onclick="change_color(this);">&nbsp;</button>
         <button style="border: 0px; background-color: rgb(159, 223, 163);" onclick="change_color(this);">&nbsp;</button>
@@ -19,6 +23,7 @@
         <button style="border: 0px; background-color: rgb(124, 205, 255);" onclick="change_color(this);">&nbsp;</button>
         <button style="border: 0px; background-color: rgb(201, 171, 238);" onclick="change_color(this);">&nbsp;</button>
         <button style="border: 0px; background-color: lightgray;" onclick="change_color(this);">&nbsp;</button>
+        <a href="#" onclick="save_note();" style="text-decoration: none">💾</a>
     </div>
     <div id="editor"></div>
     <zero-md>

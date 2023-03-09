@@ -1,23 +1,29 @@
 # Floating notes
 What MS Sticky Notes should have been.
 
+The goal is to start a markdown note as quick as possible.
+
 ## How to use
 
 ### Create a shortcut
-Creating the short cut not only gives a quick access,
+Creating the shortcut not only gives a quick access,
 but also start the app without distracting browser toolbars.
 Optional but highly suggested
 
 1. Go to https://urfdvw.github.io/floating-note
 2. Using chrome as example
 ![](2023-03-08-18-33-40.png)
+3. Pin shortcut to system bar or dock
 
 ### How to use
 1. click on the created shortcut
     - or go to https://urfdvw.github.io/floating-note
-2. Start typing and it renders
+2. Evething should be intuitive
 3. [Ctrl-Enter] ([Cmd-Enter] on mac) to hide the editor
-4. Click on the [Edit] button to back to editor
+
+PS: You can keep note always on top on Windows 10+ with the help of
+[PowerToy](https://learn.microsoft.com/en-us/windows/powertoys/)
+
 
 ## Tech involved
 - Ace Editor for editor
