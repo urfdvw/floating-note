@@ -1,9 +1,9 @@
 # Floating notes
-What MS Sticky Notes should have been.
-
-The goal is to start a markdown note as quick as possible.
+Start a markdown note as quick as possible.
+No worries about editors, workspaces, accounts etc.
 
 ## How to use
+![tutorial](./tutorial.gif)
 
 ### Create a shortcut
 Creating the shortcut not only gives a quick access,
