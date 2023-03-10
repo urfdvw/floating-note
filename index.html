@@ -13,21 +13,40 @@
         src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
     ></script>
     <script defer src="note.js"></script>
+    <style>
+        body {
+            position: relative;
+        }
+        #tools {
+            position: absolute;
+            top: calc(100vh - 30pt);
+            z-index: 10;
+        }
+        #main {
+            height: calc(100vh - 30pt);
+            overflow-y: auto;
+        }
+        button {
+            border: 0px;
+        }
+    </style>
 </head>
 <body>
     <div id="tools", style="padding-bottom: 8pt;">
-        <a href="#" onclick="show_editor();" style="text-decoration: none">✏️</a>
-        <button style="border: 0px; background-color: rgb(238, 229, 148);" onclick="change_color(this);">&nbsp;</button>
-        <button style="border: 0px; background-color: rgb(159, 223, 163);" onclick="change_color(this);">&nbsp;</button>
-        <button style="border: 0px; background-color: rgb(240, 153, 140);" onclick="change_color(this);">&nbsp;</button>
-        <button style="border: 0px; background-color: rgb(124, 205, 255);" onclick="change_color(this);">&nbsp;</button>
-        <button style="border: 0px; background-color: rgb(201, 171, 238);" onclick="change_color(this);">&nbsp;</button>
-        <button style="border: 0px; background-color: lightgray;" onclick="change_color(this);">&nbsp;</button>
+        <a href="#" onclick="on_pencil_clicked();" style="text-decoration: none">✏️</a>
+        <button style="background-color: rgb(238, 229, 148);" onclick="change_color(this);">&nbsp;</button>
+        <button style="background-color: rgb(159, 223, 163);" onclick="change_color(this);">&nbsp;</button>
+        <button style="background-color: rgb(240, 153, 140);" onclick="change_color(this);">&nbsp;</button>
+        <button style="background-color: rgb(124, 205, 255);" onclick="change_color(this);">&nbsp;</button>
+        <button style="background-color: rgb(201, 171, 238);" onclick="change_color(this);">&nbsp;</button>
+        <button style="background-color: lightgray;" onclick="change_color(this);">&nbsp;</button>
         <a href="#" onclick="save_note();" style="text-decoration: none">💾</a>
     </div>
-    <div id="editor"></div>
-    <zero-md>
-        <script type="text/markdown" id="disp">
-        </script>
-    </zero-md>
+    <div id="main">
+        <div id="editor"></div>
+        <zero-md>
+            <script type="text/markdown" id="disp">
+            </script>
+        </zero-md>
+    </div>
 </body>

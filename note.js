@@ -25,10 +25,13 @@ editor.focus();
 
 /* UI */
 
-function show_editor () {
-    document.getElementById('editor').style.display = '';
-    document.getElementById('tools').style.display = 'none';
-    editor.focus();
+function on_pencil_clicked () {
+    if (document.getElementById('editor').style.display === '') {
+        document.getElementById('editor').style.display = 'none';
+    } else {
+        document.getElementById('editor').style.display = '';
+        editor.focus();
+    }
 }
 
 document.body.style.background = 'lightgray';
