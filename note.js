@@ -6,6 +6,7 @@ editor.setOptions({
     placeholder: "Markdown here",
 });
 editor.setOptions({fontSize: '12pt'});
+editor.session.setUseWrapMode(true);
 editor.session.setMode("ace/mode/markdown")
 
 // update contents for rendering
