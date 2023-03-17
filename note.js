@@ -5,11 +5,18 @@ editor.setOptions({
     maxLines: Infinity,
     placeholder: "Markdown here",
 });
+editor.setOptions({fontSize: '12pt'});
 editor.session.setMode("ace/mode/markdown")
 
 // update contents for rendering
 editor.session.on('change', () => {
     document.getElementById('disp').innerHTML = editor.session.getValue();
+    let name = trim(editor.session.getValue().trim().split('\n')[0], '#').trim();
+    if (name.length > 0) {
+        document.title = name;
+    } else {
+        document.title = "Floating Notes";
+    }
 })
 
 editor.commands.addCommand({
@@ -19,6 +26,12 @@ editor.commands.addCommand({
         document.getElementById('editor').style.display = 'none';
         document.getElementById('tools').style.display = '';
     },
+});
+
+editor.commands.addCommand({
+    name: 'save',
+    bindKey: { win: 'Ctrl-S', mac: 'Cmd-S' },
+    exec: save_note,
 });
 
 editor.focus();
@@ -85,8 +98,7 @@ function trim(str, ch) {
 }
 
 function save_note() {
-    let name = trim(editor.session.getValue().trim().split('\n')[0], '#').trim();
-    if (name.length > 0) {
-        download(editor.getValue(), name + '.md', 'text')
+    if (editor.getValue().length > 0) {
+        download(editor.getValue(), document.title + '.md', 'text')
     }
 }
