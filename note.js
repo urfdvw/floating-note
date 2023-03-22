@@ -18,6 +18,8 @@ editor.session.on('change', () => {
     } else {
         document.title = "Floating Notes";
     }
+
+    save_to_local_storage();
 })
 
 editor.commands.addCommand({
@@ -29,12 +31,10 @@ editor.commands.addCommand({
     },
 });
 
-editor.commands.addCommand({
-    name: 'save',
-    bindKey: { win: 'Ctrl-S', mac: 'Cmd-S' },
-    exec: save_note,
-});
-
+const stored_text = window.localStorage.getItem("floating_notes")
+if (stored_text != null) {
+    editor.setValue(stored_text, 1)
+}
 editor.focus();
 
 /* UI */
@@ -65,6 +65,10 @@ window.addEventListener("beforeunload", function (e) {
 });
 
 /* Save */
+function save_to_local_storage() {
+    window.localStorage.setItem("floating_notes", editor.getValue());
+}
+
 function download(data, filename, type) {
     // Function to download data to a file
     var file = new Blob([data], { type: type });
